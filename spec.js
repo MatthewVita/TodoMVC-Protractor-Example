@@ -1,19 +1,3 @@
-/**
- * Tasks:
- *
- * - add documentation
- *     - todo deleting at specific indexes
- *     - uncomplete task
- *     - todo editing at specific indexes
- *     - todo checking for strikethrough on completed tasks
- *     - todo uncompleting 2+ times on a task
- *     - todo uncompleteing multiple tasks
- *     - small changes to index.html template
- * - view report to see the describe/it statements
- * - take licecap
- * - push to GH
- */
-
 describe('Task list', function() {
   var applicationUrl = 'http://localhost:8000';
 
@@ -314,4 +298,3 @@ describe('Task list', function() {
     });
   });
 });
-
