@@ -6,6 +6,7 @@ Angular Protractor example using TodoMVC (http://todomvc.com/). This is my first
 
 ## Run
 - Install Node, Chrome, [Protractor](http://www.protractortest.org/#/protractor-setup), and [local-web-server](https://www.npmjs.com/package/local-web-server)
+- Execute `webdriver-manager start`
 - From the root of the repo, execute `cd todomvc && ws` to spin up a web server with the Angular code
 - From the root of the repo, execute `protractor spec.js` to run the tests
 
