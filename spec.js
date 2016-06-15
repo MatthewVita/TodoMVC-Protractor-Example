@@ -69,17 +69,11 @@ describe('Task list', function() {
     });
 
     it('shows the task in the list', function() {
-      elements.getTaskInList(0).getText()
-        .then(function(text) {
-          expect(text).toBe('task a');
-        });
+      expect(elements.getTaskInList(0).getText()).toBe('task a');
     });
 
     it('represents the task in the task count', function() {
-      elements.getTodoCount().getText()
-        .then(function(taskCountText) {
-          expect(taskCountText).toBe('1 item left');
-        });
+      expect(elements.getTodoCount().getText()).toBe('1 item left');
     });
   });
 
@@ -91,17 +85,11 @@ describe('Task list', function() {
     });
 
     it('shows the edited task in the list', function() {
-      elements.getTaskInList(0).getText()
-        .then(function(text) {
-          expect(text).toBe('task a - edited');
-        });
+      expect(elements.getTaskInList(0).getText()).toBe('task a - edited');
     });
 
     it('represents the edited task in the task count', function() {
-      elements.getTodoCount().getText()
-        .then(function(taskCountText) {
-          expect(taskCountText).toBe('1 item left');
-        });
+      expect(elements.getTodoCount().getText()).toBe('1 item left');
     });
   });
 
@@ -114,17 +102,11 @@ describe('Task list', function() {
     });
 
     it('shows the task in the completed list', function() {
-      elements.getTaskInList(0).getText()
-        .then(function(text) {
-          expect(text).toBe('task a');
-        });
+      expect(elements.getTaskInList(0).getText()).toBe('task a');
     });
 
     it('does not represent the task in the task count', function() {
-      elements.getTodoCount().getText()
-        .then(function(taskCountText) {
-          expect(taskCountText).toBe('0 items left');
-        });
+      expect(elements.getTodoCount().getText()).toBe('0 items left');
     });
   });
 
@@ -142,10 +124,7 @@ describe('Task list', function() {
     });
 
     it('does not represent the task in the task count', function() {
-      elements.getTodoCount().isDisplayed()
-        .then(function(state) {
-          expect(state).toBe(false);
-        });
+      expect(elements.getTodoCount().isDisplayed()).toBe(false);
     });
   });
 
@@ -161,10 +140,7 @@ describe('Task list', function() {
     });
 
     it('does not represent the task in the task count', function() {
-      elements.getTodoCount().getText()
-        .then(function(taskCountText) {
-          expect(taskCountText).toBe('');
-        });
+      expect(elements.getTodoCount().getText()).toBe('');
     });
   });
 
@@ -178,18 +154,14 @@ describe('Task list', function() {
 
     it('shows the tasks in the list', function() {
       ['a', 'b', 'c'].forEach(function(char, index) {
-        elements.getTaskInList(index).getText()
-          .then(function(text) {
-            expect(text).toBe('task ' + char);
-          });
+        elements.getTaskInList(index).getText().then(function(text) {
+          expect(text).toBe('task ' + char);
+        });
       });
     });
 
     it('represents the tasks in the task count', function() {
-      elements.getTodoCount().getText()
-        .then(function(taskCountText) {
-          expect(taskCountText).toBe('3 items left');
-        });
+      expect(elements.getTodoCount().getText()).toBe('3 items left');
     });
   });
 
@@ -206,18 +178,14 @@ describe('Task list', function() {
 
     it('shows the edited tasks in the list', function() {
       ['a', 'b', 'c'].forEach(function(char, index) {
-        elements.getTaskInList(index).getText()
-          .then(function(text) {
-            expect(text).toBe('task ' + char + ' - edited');
-          });
+        elements.getTaskInList(index).getText().then(function(text) {
+          expect(text).toBe('task ' + char + ' - edited');
+        });
       });
     });
 
     it('represents the edited tasks in the task count', function() {
-      elements.getTodoCount().getText()
-        .then(function(taskCountText) {
-          expect(taskCountText).toBe('3 items left');
-        });
+      expect(elements.getTodoCount().getText()).toBe('3 items left');
     });
   });
 
@@ -235,18 +203,12 @@ describe('Task list', function() {
 
     it('shows the completed tasks in the completed list', function() {
       ['a', 'b', 'c'].forEach(function(char, index) {
-        elements.getTaskInList(index).getText()
-          .then(function(text) {
-            expect(text).toBe('task ' + char);
-          });
+        expect(elements.getTaskInList(index).getText()).toBe('task ' + char);
       });
     });
 
     it('does not represent the task in the task count', function() {
-      elements.getTodoCount().getText()
-        .then(function(taskCountText) {
-          expect(taskCountText).toBe('0 items left');
-        });
+      expect(elements.getTodoCount().getText()).toBe('0 items left');
     });
   });
 
@@ -268,10 +230,7 @@ describe('Task list', function() {
     });
 
     it('does not represent the task in the task count', function() {
-      elements.getTodoCount().isDisplayed()
-        .then(function(state) {
-          expect(state).toBe(false);
-        });
+      expect(elements.getTodoCount().isDisplayed()).toBe(false);
     });
   });
 
@@ -291,10 +250,7 @@ describe('Task list', function() {
     });
 
     it('does not represent the tasks in the task count', function() {
-      elements.getTodoCount().getText()
-        .then(function(taskCountText) {
-          expect(taskCountText).toBe('');
-        });
+      expect(elements.getTodoCount().getText()).toBe('');
     });
   });
 });
